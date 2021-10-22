@@ -20,8 +20,9 @@
 }
 
 #footer {
-  height: 200px;
+  height: 10%;
   background-color: red;
+  padding-top: 100px;
 }
 
 #banner {

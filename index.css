@@ -59,6 +59,7 @@
   margin-bottom: 12px;
   border: 1px solid rgba(177, 174, 174, 0.726);
   border-radius: 12px;
+  overflow: hidden;
 }
 
 #product-list {

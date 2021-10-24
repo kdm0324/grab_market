@@ -78,9 +78,6 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="index.css" type="text/css" />
-    <script>
-      // prepare to Apply javascript
-    </script>
   </head>
   <body>
     <div id="header">
@@ -92,30 +89,55 @@
       <div id="banner">
         <img src="images/banners/banner1.png" />
       </div>
-
       <h1>판매되는 상품들</h1>
       <div id="product-list">
-        <div class="product-card">
-          <div>
-            <img
-              class="product-image"
-              src="images/products/basketball1.jpeg"
-              alt=""
-            />
-          </div>
-          <div class="product-contents">
-            <span class="product-name">농구공 1호</span>
-            <span class="product-price">50000원</span>
-            <div class="product-seller">
-              <img src="images/icons/avatar.png" class="product-avartar alt="">
-              <span>그랩</span>
-            </div>
-          </div>
-        </div>
+
           </div>
         </div>
       </div>
     </div>
     <div id="footer"></div>
   </body>
+  <script>
+    // prepare to Apply javascript
+    var products = [{
+      name: '농구공',
+      price: '100000',
+      seller : '조던',
+      imageUrl : 'images/products/basketball1.jpeg'
+    },{
+      name: '축구공',
+      price: '50000',
+      seller : '메시',
+      imageUrl : 'images/products/soccerball1.jpg'
+    },{
+      name: '키보드',
+      price: '10000',
+      seller : '그랩',
+      imageUrl : 'images/products/keyboard1.jpg'
+    }];
+
+    let productHtml = '';
+    for(var i =0;i<products.length; i++){
+      let product = products[i];
+      productHtml += 
+      '<div class="product-card">' +
+      '<div>'+
+        '<img   class="product-image"  src="'+product.imageUrl+'"  alt="" />'+
+      '</div>'+
+      '<div class="product-contents">'+
+        '<span class="product-name">'+product.name+'</span>'+
+        '<span class="product-price">'+product.price+'원</span>'+
+        '<div class="product-seller">'+
+          '<img src="images/icons/avatar.png" class="product-avartar alt="">'+
+          '<span>'+product.seller+'</span>'+
+        '</div>'+
+      '</div>'+
+    '</div>' 
+    }
+
+    document.querySelector("#product-list").innerHTML = productHtml;
+
+    //어떤 태그를 선택할 것인지 고를 수 있음. product-list 내부의 컨텐츠를 조작할 수 있게 됨.
+  </script>
 </html>
